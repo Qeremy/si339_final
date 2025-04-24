@@ -1,0 +1,61 @@
+/* Utility */
+.hidden {
+    display: none;
+  }
+
+  /* Game Section Container */
+  #game-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    min-height: calc(100vh - 4rem);
+  }
+  
+  /* Canvas */
+  canvas#gameCanvas {
+    border: 1px solid #000;
+    background-color: #fff;
+    display: block;
+    margin: 3rem auto;
+  }
+  
+  /* Score and instruction */
+  #scoreDisplay,
+  #instruction {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0.5rem 0;
+  }
+  
+  /* Control button */
+  #control-btn {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: rgb(237, 24, 24);
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 1rem;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem 0;
+  }
+  footer p {
+    margin: 0;
+  }
+
+  #gameCanvas {
+    width: 100%;
+    max-width: 600px;    /* retain your design max */
+    height: auto;        /* keep aspect ratio */
+    display: block;
+    margin: 1rem auto;
+  }
+  

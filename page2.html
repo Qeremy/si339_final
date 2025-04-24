@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Interactive College Journey Timeline" />
+  <title>College Journey Timeline</title>
+  <link rel="stylesheet" href="css/html5reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+  <header>
+    <h1>J-SPACE</h1>
+  </header>
+
+  <!-- Image Preview Modal -->
+  <div id="modal" class="hidden">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()"> × </button>
+      <img id="modal-img" src="" alt="">
+      <p id="modal-desc"></p>
+    </div>
+  </div>
+
+  <!-- Quiz Modal -->
+  <div id="quiz-modal" class="hidden">
+    <div class="modal-overlay"></div>
+    <div class="modal-content quiz-content">
+      <button class="modal-close" onclick="closeQuiz()"> × </button>
+      <h2>Which year is this?</h2>
+      <form id="quiz-form">
+        <label><input type="radio" name="year" value="0"> Freshman Year</label><br>
+        <label><input type="radio" name="year" value="1"> Sophomore Year</label><br>
+        <label><input type="radio" name="year" value="2"> Junior Year</label><br>
+        <label><input type="radio" name="year" value="3"> Senior Year</label><br>
+        <button type="button" id="quiz-submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <main>
+    <div class="description">
+      <p>Identify which college year each image set represents to unlock my contact page!</p>
+    </div>
+    
+    <!-- Year 1: Freshman -->
+    <div class="year-content" id="freshman-content">
+      <div class="image-grid">
+        <img src="/visuals/1/sad.JPG"    alt="Covid isolation period with sad face" data-desc="Isolated in Northwood after contracting COVID">
+        <img src="/visuals/1/desk.jpeg"  alt="Desk in my dorm"                 data-desc="My study desk in Bursley Hall">
+        <img src="/visuals/1/apple.jpg"  alt="Apple picking with friends"      data-desc="An autumn apple-picking outing">
+      </div>
+    </div>
+
+    <!-- Year 2: Sophomore -->
+    <div class="year-content hidden" id="sophomore-content">
+      <div class="image-grid">
+        <img src="/visuals/2/hands.jpg"            alt="Holding hands"                   data-desc="Holding hands with my girlfriend">
+        <img src="/visuals/2/footballfield.jpg"    alt="Football game"                  data-desc="First college football game experience">
+        <img src="/visuals/2/iceTree.jpg"          alt="Icy tree branches"              data-desc="Frosty day with glassy tree">
+      </div>
+    </div>
+
+    <!-- Year 3: Junior -->
+    <div class="year-content hidden" id="junior-content">
+      <div class="image-grid">
+        <img src="/visuals/3/aurora.jpeg"         alt="Chasing aurora"                 data-desc="A midnight chase after the northern lights">
+        <img src="/visuals/3/bowlingpic.jpg"      alt="Bowling with friends"           data-desc="Bowling night with my friends">
+        <img src="/visuals/3/championship.jpg"    alt="Celebrating championship"       data-desc="Celebrating our national championship win">
+      </div>
+    </div>
+
+    <!-- Year 4: Senior -->
+    <div class="year-content hidden" id="senior-content">
+      <div class="image-grid">
+        <img src="/visuals/4/avocado.jpeg"        alt="An avocado plant"               data-desc="Somehow I planted an avocado seed">
+        <img src="/visuals/4/rainbow.jpg"         alt="Rainbow above Target"           data-desc="A gorgeous rainbow after dinner with friends">
+        <img src="/visuals/4/light.jpg"           alt="Bright sunny day"               data-desc="Sunny day following a rainstorm">
+      </div>
+    </div>
+
+    <!-- Single action button -->
+    <button id="action-btn">Next</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jeremy</p>
+  </footer>
+
+  <script src="js/timelinepage.js"></script>
+</body>
+</html>
